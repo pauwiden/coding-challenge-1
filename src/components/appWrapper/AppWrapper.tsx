@@ -3,7 +3,7 @@ import { alpha, AppBar, Box, Container, IconButton, InputBase, Paper, styled, To
 import { Link, Outlet } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
-import getAddressTitle from '../utils/getTitle';
+import getAddressTitle from '../../utils/getTitle';
 
 function AppWrapper() {
   const title = getAddressTitle(document.location.href);

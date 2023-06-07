@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import AppWrapper from "../components/AppWrapper";
+import AppWrapper from "../components/appWrapper/AppWrapper";
 import Home from "../pages/home/Home";
 import SearchPage from "../pages/search/Search";
 

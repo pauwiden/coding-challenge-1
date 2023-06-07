@@ -1,11 +1,12 @@
 import { injectable } from "inversify";
+import InventoryItem from "../types/InventoryItem";
 import mockData from "./mockData.json";
 
 export interface ApiResponseType {
   /**
    * Data returned in the response.
    */
-  data: any;
+  data: Array<InventoryItem>;
   /**
    * The responses status code (if applicable).
    */
@@ -29,16 +30,5 @@ export default class ApiService implements ApiServiceType {
 
   public get = async (): Promise<ApiResponseType> => {
     return mockData;
-  }
-
-  public filtered = async (value: string, param: string): Promise<ApiResponseType> => {
-    const response = await this.get();
-    const filteredData = response.data.filter((item: any) => {
-      return item[param].toLowerCase().includes(value.toLowerCase());
-    });
-    return {
-      data: filteredData,
-      status: response.status,
-    };
   }
 }
