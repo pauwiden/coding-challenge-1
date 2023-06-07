@@ -2,8 +2,6 @@ import {
   action,
   computed,
   makeAutoObservable,
-  makeObservable,
-  observable,
 } from "mobx";
 import InventoryItem from "../types/InventoryItem";
 import ApiService, { ApiResponseType } from "../service/ApiService";
